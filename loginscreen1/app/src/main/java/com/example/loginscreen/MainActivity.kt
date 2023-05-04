@@ -11,9 +11,8 @@ import com.google.android.material.snackbar.Snackbar
 class MainActivity : AppCompatActivity() {
 
     private val userList: MutableList<User> = mutableListOf(
-        User("gero", "Gero1234", "geromartos@gmail.com", 46580727.0),
-        User("echi", "Eze1234", "ezerozenblum@gmail.com", 47256146.0),
-        User("dendo", "Dendo1234", "dendo09@gmail.com", 47128136.0)
+        User("Jony", "1111", "leemaximojonathan@gmail.com", 46919450.0),
+
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
