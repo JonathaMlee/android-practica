@@ -1,8 +1,10 @@
 package com.example.recyclerview.adapter
 
 import android.view.View
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.recyclerview.R
 import com.example.recyclerview.yugioh
 
@@ -12,6 +14,7 @@ class yugiohViewHolder(view: View):RecyclerView.ViewHolder(view){
     val type = view.findViewById<TextView>(R.id.type)
     val atk = view.findViewById<TextView>(R.id.atk)
     val def = view.findViewById<TextView>(R.id.def)
+    val photo = view.findViewById<ImageView>(R.id.imageView)
 
 
     fun render(yugiohmodel: yugioh){
@@ -19,6 +22,7 @@ class yugiohViewHolder(view: View):RecyclerView.ViewHolder(view){
         type.text = yugiohmodel.Type
         atk.text = yugiohmodel.Atk.toString()
         def.text = yugiohmodel.Def.toString()
+        Glide.with(photo.context).load(yugiohmodel.photo).into(photo)
 
 
 
